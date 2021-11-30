@@ -77,7 +77,7 @@ def download_a_wallpaper(tup: tuple):
             for anchor in anchors:
                 if anchor.contents[0].strip().lower() == 'original':
                     wallpaper_url = anchor.get('href')
-                    print(wallpaper_name + ': ' + wallpaper_url)
+                    # print(wallpaper_name + ': ' + wallpaper_url)
                     download_a_file(wallpaper_url, wallpaper_save_path + wallpaper_filename)
         os.remove(webpages_save_path + wallpaper_webpage_filename)
 
