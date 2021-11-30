@@ -26,7 +26,8 @@ A python3 script to download every Bing Wallpaper that made it to a Windows lock
 
 - ![start](https://i.imgur.com/37ODx8o.png)
 - ![kinda-halfway](https://i.imgur.com/yW5EXuQ.png)
-- ![done!](https://i.imgur.com/yW5EXuQ.png)
+- ![done!](https://user-images.githubusercontent.com/22996531/144054620-68aa96d6-ea76-4aac-9e9f-cdd2dc831776.png)
+
 
 ## FAQs
 
