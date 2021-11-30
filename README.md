@@ -19,7 +19,7 @@ A python3 script to download every Bing Wallpaper that made it to a Windows lock
 - install using this command:-
 
    ```bash
-   python3 -m pip install tqdm requests lxml urllib3 beautifulsoup4
+   python3 -m pip install tqdm requests beautifulsoup4
    ```
 
 ## SCREENSHOTS
