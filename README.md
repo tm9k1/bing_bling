@@ -42,7 +42,7 @@ A python3 script to download every Bing Wallpaper that made it to a Windows lock
     The location specified in `wallpaper_save_path` variable (at the top of the script) will be checked for any wallpapers not yet downloaded by the script. If any wallpaper is missing, the script downloads it for you.
 
     - NOTE: This folder NEED NOT BE EMPTY; i.e. you can point the variable to your wallpapers collection folder, and the script will fill the folder with Bing wallpapers and WON'T remove your other wallpapers.
-    - NOTE: The default location of this folder is './Wallpapers/' (the trailing backslash is important!!!!)
+    - NOTE: The default location of this folder is './Wallpapers/'
 
 ## contributions are welcome 🙇‍♂️
 
