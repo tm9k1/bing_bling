@@ -7,8 +7,8 @@ from tqdm import tqdm
 
 # change these two to whatever you like.
 # NOTE: Remember that the next run would again download all wallpapers if you move the wallpapers away from wallpaper_save_path
-wallpaper_save_path = './Wallpapers/'
-webpages_save_path = './webpages/'
+wallpaper_save_path = '/mnt/hdd/baadal/images/wallpapers/horizontal/spotlight'
+webpages_save_path = '/tmp/webpages/'
 
 # This is the link I use to get the wallpapers. This site is updated daily, with latest wallpapers at the top.
 sitemap_url = 'https://www.bwallpaperhd.com/sitemap.html'
@@ -88,7 +88,10 @@ def download_a_wallpaper(tup: tuple):
 # make the necessary directories in case they don't exist
 os.makedirs(wallpaper_save_path, exist_ok=True)
 os.makedirs(webpages_save_path, exist_ok=True)
-
+if not wallpaper_save_path.endswith('/'):
+    wallpaper_save_path += '/'
+if not webpages_save_path.endswith('/'):
+    webpages_save_path += '/'
 # extract the list of wallpapers with links to each wallpaper's own webpage
 list_of_wallpapers = extract_links_from_sitemap(sitemap_url, sitemap_filename)
 # get the total count of wallpapers we can expect by the end of processing
@@ -97,7 +100,7 @@ total_wallpapers = len(list_of_wallpapers)
 progress_bar = tqdm(range(total_wallpapers), desc="Downloading Wallpapers",colour="blue", bar_format='{l_bar}{bar}| [{n_fmt}/{total_fmt}] [Elapsed: {elapsed}]')
 
 # Start distributing work across multiple threads. 20 seems to be a safe count for now.
-with concurrent.futures.ThreadPoolExecutor(max_workers=20, thread_name_prefix='Wallpaper_Downloader_') as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=69, thread_name_prefix='Wallpaper_Downloader_') as executor:
     future_to_url = [ executor.submit(download_a_wallpaper, wallpaper_entry) for wallpaper_entry in list_of_wallpapers ]
 
     for future in concurrent.futures.as_completed(future_to_url):
